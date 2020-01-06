@@ -1,0 +1,27 @@
+{
+  "name": "camelkebabs",
+  "version": "1.0.0",
+  "description": "A npm package that converts javascript attributes from kebab to camel case and vice versa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mraafaykhan/camelKebabs.git"
+  },
+  "keywords": [
+    "npm",
+    "javascript",
+    "kebab",
+    "case",
+    "camel",
+    "case"
+  ],
+  "author": "Muhammad Raafay Rashid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mraafaykhan/camelKebabs/issues"
+  },
+  "homepage": "https://github.com/mraafaykhan/camelKebabs#readme"
+}
