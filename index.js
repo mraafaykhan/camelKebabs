@@ -1,3 +1,8 @@
+/*
+* Maintainer: Muhammad Raafay Rashid Khan 
+* Email: raafayrashid@icloud.com
+*/
+
 /*  
 * Function takes a javascript object and recursively applies the supplied formatter
 * function.
@@ -28,7 +33,7 @@ const changeCase = (object, formatter) => {
 const kebabToCamel = (obj) => {
   return changeCase(obj, (key) => {
     return key.split('-').reduce((attribute, word, index)=> {
-      attribute += index ? word[0].toUpperCase() + word.substr(1): word
+      attribute += index ? word[0].toUpperCase() + word.substr(1): word.toLowerCase()
       return attribute
     }, '')
   })
@@ -40,7 +45,8 @@ const kebabToCamel = (obj) => {
 */
 const camelToKebab = (obj) => {
   return changeCase(obj, (key) => {
-    return key.split('').reduce((attribute, character, index) => {
+    return key.split('').reduce((attribute, character, index) => { // convert to char array
+      // iterate over key as a string
         if (index === 0) {
           return attribute += character.toLowerCase()
         }
