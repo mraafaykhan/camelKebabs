@@ -21,7 +21,7 @@ const changeCase = (object, formatter) => {
   return Object.keys(object).reduce((obj, key) => { // iterate over the keys of the object
     // if the key of the object refer to another nested object, then pass it recursively to the changeCase function
     // otherwise if the key refers to a primitive value return the value
-    obj[formatter(key)] = typeof object[key] === 'object' ? changeCase(object[key], formatter) : object[key]
+    obj[formatter(key)] = object[key] && typeof object[key] === 'object' ? changeCase(object[key], formatter) : object[key]
     return obj;
   }, {})
 }
