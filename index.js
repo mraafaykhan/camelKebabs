@@ -58,6 +58,40 @@ const camelToKebab = (obj) => {
   })
 }
 
+/* 
+* Function converts an object from kebab case to JS friendly camel case
+* @Param obj: javascript object
+*/
+const snakeCaseToCamel = (obj) => {
+  return changeCase(obj, (key) => {
+    return key.split('_').reduce((attribute, word, index)=> {
+      attribute += index ? word[0].toUpperCase() + word.substr(1): word.toLowerCase()
+      return attribute
+    }, '')
+  })
+}
+
+
+
+/*
+* Function converts an object from camel case to kebab case notation
+* @Param obj: javascript object
+*/
+const camelToSnake = (obj) => {
+  return changeCase(obj, (key) => {
+    return key.split('').reduce((attribute, character, index) => { // convert to char array
+      // iterate over key as a string
+        if (index === 0) {
+          return attribute += character.toLowerCase()
+        }
+        if (character === character.toUpperCase()) {
+          return attribute += `_${character.toLowerCase()}`
+        }
+        return attribute += character   
+    }, '')
+  })
+}
+
 module.exports = {
   camelToKebab: camelToKebab,
   kebabToCamel: kebabToCamel
