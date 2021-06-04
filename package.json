@@ -1,6 +1,6 @@
 {
   "name": "@mraafaykhan/camelkebabs",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "A light library that converts javascript objects from kebab case notation to camel case notation and vise versa.",
   "main": "index.js",
   "scripts": {
